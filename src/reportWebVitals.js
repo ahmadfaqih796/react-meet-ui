@@ -1,9 +1,15 @@
+// https://www.npmjs.com/package/web-vitals
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import("web-vitals")
       .then(
-        ({ getCLS, getFID, getFCP, getLCP, getTTFB, onCLS, onINP, onLCP }) => {
-          console.log("masukkkkk", onCLS(onPerfEntry));
+        ({
+          // getCLS, getFID, getFCP, getLCP, getTTFB,
+          onCLS,
+          // onINP,
+          // onLCP,
+        }) => {
+          console.log("masukkkkk", onCLS(console.log));
           // getCLS(onPerfEntry);
           // getFID(onPerfEntry);
           // getFCP(onPerfEntry);
@@ -12,7 +18,7 @@ const reportWebVitals = (onPerfEntry) => {
         }
       )
       .catch((error) => {
-        console.log("jjjjjjjjjS", error);
+        console.log("ini error", error);
       });
   }
 };
