@@ -1,6 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import logo from "./logo.svg";
+import React from "react";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         >
           Learn React
         </a>
+        <Home />
       </header>
     </div>
   );
